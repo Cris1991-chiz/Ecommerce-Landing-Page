@@ -1,0 +1,15 @@
+/*----slider scss----*/
+.slider{
+    width: 55%;
+    margin-top: 20px;
+    margin-left: 30%;
+    padding: 0 10px;
+
+    img {
+        height: 40%;
+    }
+}
+
+.carousel-indicators{
+    z-index: 1 !important;
+}

@@ -1,0 +1,53 @@
+.products-container {
+    width: 90%;
+    margin-top: 50px;
+}
+
+.column{
+    display: table;
+    padding: 1px; 
+}
+
+.products {
+    float: right;
+    width: 20%;
+    border: 0.5px solid lightgray;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+    }
+}
+
+.details {
+    margin: 1px 10px 10px 10px;
+    text-align: center;
+
+    .btn-primary {
+        font-size: 14px;
+        background-color: #fa8072;
+        border-color: #fa8072;
+
+        &:hover {
+            background-color: #e8491d;
+            border: #e8491d;
+        }
+    }
+
+    h5 {
+        margin: 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 4px;
+        font-size: 13px;
+    }
+}
