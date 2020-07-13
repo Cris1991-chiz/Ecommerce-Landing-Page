@@ -1,15 +1,49 @@
-
 /* On screens that are 992px wide or less*/
 @media screen and (max-width: 992px) {
   .products {   
     width: 40%;
+  }
+
+  .col-product-container {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .category-container {
+    width: 100%;
+  }
+}
+
+/* On screens that are 768px wide or less*/
+@media screen and (max-width: 768px) {
+  .nav-bar {
+
+    .drop-menu-container {
+      margin: 0;
+      padding: 0;
+        
+      li a:not(.active) {
+        display: none;     
+      }
+
+      .bars-icon {
+        display: block;
+        float: right;
+        color: #ffffff;
+        
+        .fa-bars{
+          font-size: 18px;
+        }
+      }
+    }   
   }
 }
 
 /* On screens that are 768px wide or less*/
 @media screen and (max-width: 768px) {
   span.contact, span.checkout, span.facebook, span.instagram, span.follow {
-      display: none;
+    display: none;
   }
 
   .search-box {   
@@ -19,19 +53,55 @@
 
   .nav-bar {
 
-    ul {
+    .drop-menu-container.responsive {
       margin: 0;
       padding: 0;
-    
+      flex-direction: column;
+
+      .bars-icon {
+        position: absolute;
+        left: 41.7%;
+      }
+
       li {
         width: 100%;
         
         .drop-down {
-          position: relative;
-
+          position: relative;      
         }
       }
+          
+      li a:not(.active) {
+        display: block;      
+      }
     }   
+  }
+
+  .details {
+    
+    .btn-secondary
+    {
+      font-size: 12px; 
+    }
+  }
+
+  .column{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .vertical-banner {
+    height: 590px;
+    width: 400px;
+  }
+
+  .row-category-btn {
+    .btn-secondary {
+      width: 150px;
+      height: 40px;
+      font-size: 18px;
+      
+    }
   }
 }
 
@@ -39,6 +109,29 @@
 @media screen and (max-width: 600px) {
   .products {   
     width: 80%;
+  }
+
+  .vertical-banner {
+    height: 505px;
+    width: 400px;
+  }
+
+  .drop-menu-container {
+    margin: 0;
+    padding: 0;
+      
+    .landing-home {
+      display: none;     
+    }
+  }
+
+  .row-category-btn {
+    .btn-secondary {
+      width: 85px;
+      height: 35px;
+      font-size: 10px;
+      margin-left: 5px;
+    }
   }
 }
 

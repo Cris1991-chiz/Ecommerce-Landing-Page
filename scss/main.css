@@ -89,16 +89,24 @@ nav {
   padding: 4px;
   height: 30px;
   width: 300px;
+  outline: none;
 }
 
-.search-box form .button_1 {
-  height: 30px;
+.search-box form input[type="text"]:focus {
+  border: 0.5px solid #e8491d !important;
+}
+
+.search-box form .btn-secondary {
   background: #e8491d;
   border: 0;
-  padding-left: 5px;
-  padding-right: 5px;
   color: #ffffff;
   width: 40px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.search-box form .btn-secondary:focus {
+  background-color: #e8491d !important;
 }
 
 .search-box label {
@@ -168,45 +176,66 @@ nav {
   font-size: 25px;
 }
 
+.category-container {
+  overflow: hidden;
+  background-color: #303030;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-container li {
+  list-style-type: none;
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 30px;
+}
+
+.category-container li.active {
+  background-color: #fa8072;
+}
+
 .nav-bar {
   overflow: hidden;
   background-color: #303030;
 }
 
-.nav-bar ul {
+.nav-bar .drop-menu-container {
   list-style: none;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 0px;
   margin: 0px;
 }
 
-.nav-bar ul li {
+.nav-bar .drop-menu-container li {
   width: 20%;
   line-height: 40px;
+  text-align: center;
 }
 
-.nav-bar ul li a {
+.nav-bar .drop-menu-container li a {
   text-decoration: none;
   color: #ffffff;
   letter-spacing: 2px;
 }
 
-.nav-bar ul li a:hover {
+.nav-bar .drop-menu-container li a:hover {
   color: #e8491d;
 }
 
-.nav-bar ul li .active {
+.nav-bar .drop-menu-container li .active {
   color: #e8491d;
   font-weight: bold;
-  text-align: center;
 }
 
-.nav-bar ul li .drop-down {
+.nav-bar .drop-menu-container li .drop-down {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -216,7 +245,7 @@ nav {
   z-index: 1;
 }
 
-.nav-bar ul li .drop-down a {
+.nav-bar .drop-menu-container li .drop-down a {
   float: none;
   color: #808080;
   padding: 2px 14px;
@@ -227,17 +256,21 @@ nav {
   cursor: pointer;
 }
 
-.nav-bar ul li .drop-down a:hover {
+.nav-bar .drop-menu-container li .drop-down a:hover {
   color: #e8491d;
 }
 
-.nav-bar ul li .drop-down a:before {
+.nav-bar .drop-menu-container li .drop-down a:before {
   content: '>';
   padding-right: 15px;
 }
 
-.nav-bar ul li:hover .drop-down {
+.nav-bar .drop-menu-container li:hover .drop-down {
   display: block;
+}
+
+.nav-bar .drop-menu-container .bars-icon {
+  display: none;
 }
 
 .nav-bar .fa-caret-down {
@@ -246,39 +279,72 @@ nav {
 
 .nav-bar .fa-home {
   padding-right: 7px;
-  font-size: 17px !important;
+  font-size: 20px !important;
 }
 
 /*----slider scss----*/
 .slider {
-  width: 55%;
-  margin-top: 20px;
-  margin-left: 30%;
-  padding: 0 10px;
+  margin-top: 0;
 }
 
-.slider img {
-  height: 40%;
+.slider .carousel-inner {
+  max-height: 350px !important;
 }
 
 .carousel-indicators {
   z-index: 1 !important;
 }
 
+.col-product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.vertical-banner {
+  border: 0.5px solid #d3d3d3;
+  margin-top: 20px;
+}
+
+.vertical-banner ul {
+  background: #00ced1;
+  list-style-type: none;
+  -webkit-padding-start: 0em;
+          padding-inline-start: 0em;
+}
+
+.vertical-banner ul li {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.vertical-banner img {
+  padding: 5px;
+  display: block;
+  width: 100%;
+}
+
 .products-container {
-  width: 90%;
-  margin-top: 50px;
+  margin-top: 20px;
+  padding-left: 1px;
 }
 
 .column {
-  display: table;
-  padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .products {
-  float: right;
-  width: 20%;
-  border: 0.5px solid lightgray;
+  border: 0.5px solid #d3d3d3;
+  margin: 1px;
 }
 
 .img-container {
@@ -301,15 +367,13 @@ nav {
   text-align: center;
 }
 
-.details .btn-primary {
-  font-size: 14px;
-  background-color: #fa8072;
-  border-color: #fa8072;
-}
-
-.details .btn-primary:hover {
-  background-color: #e8491d;
-  border: #e8491d;
+.details .btn-secondary,
+.details .btn-secondary:hover,
+.details .btn-secondary:active,
+.details .btn-secondary:visited,
+.details .btn-secondary:focus {
+  background-color: #e8491d !important;
+  border-color: #e8491d !important;
 }
 
 .details h5 {
@@ -321,6 +385,97 @@ nav {
 .details p {
   margin: 4px;
   font-size: 13px;
+}
+
+.login {
+  padding-top: 200px !important;
+}
+
+.modal-content input[type=text], .modal-content input[type=password] {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.modal-content input[type=text]:focus, .modal-content input[type=password]:focus {
+  border: 0.5px solid #e8491d !important;
+}
+
+.modal-content .img-container {
+  display: inline-block;
+  width: 20%;
+}
+
+.modal-content .img-container img.avatar {
+  border-radius: 50%;
+}
+
+.modal-content .login-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.modal-content .modal-footer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 25px;
+}
+
+.modal-body button {
+  background-color: #e8491d;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  outline: none !important;
+}
+
+.modal-body button:hover {
+  opacity: 0.9;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+  color: #e8491d;
+  cursor: pointer;
+}
+
+.modal-content .btn-secondary {
+  font-size: 11px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  border-radius: 0;
+}
+
+.row-category-btn {
+  text-align: center;
+}
+
+.row-category-btn .btn-secondary {
+  width: 200px;
+  height: 50px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  background-color: #303030;
+  border: 2px solid #e8491d;
+}
+
+.row-category-btn .btn-secondary:hover {
+  background-color: #303030 !important;
+}
+
+.row-category-btn .btn-secondary:focus {
+  background-color: #303030 !important;
 }
 
 footer {
@@ -336,6 +491,33 @@ footer {
 @media screen and (max-width: 992px) {
   .products {
     width: 40%;
+  }
+  .col-product-container {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .category-container {
+    width: 100%;
+  }
+}
+
+/* On screens that are 768px wide or less*/
+@media screen and (max-width: 768px) {
+  .nav-bar .drop-menu-container {
+    margin: 0;
+    padding: 0;
+  }
+  .nav-bar .drop-menu-container li a:not(.active) {
+    display: none;
+  }
+  .nav-bar .drop-menu-container .bars-icon {
+    display: block;
+    float: right;
+    color: #ffffff;
+  }
+  .nav-bar .drop-menu-container .bars-icon .fa-bars {
+    font-size: 18px;
   }
 }
 
@@ -353,15 +535,45 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
-  .nav-bar ul {
+  .nav-bar .drop-menu-container.responsive {
     margin: 0;
     padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .nav-bar ul li {
+  .nav-bar .drop-menu-container.responsive .bars-icon {
+    position: absolute;
+    left: 41.7%;
+  }
+  .nav-bar .drop-menu-container.responsive li {
     width: 100%;
   }
-  .nav-bar ul li .drop-down {
+  .nav-bar .drop-menu-container.responsive li .drop-down {
     position: relative;
+  }
+  .nav-bar .drop-menu-container.responsive li a:not(.active) {
+    display: block;
+  }
+  .details .btn-secondary {
+    font-size: 12px;
+  }
+  .column {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .vertical-banner {
+    height: 590px;
+    width: 400px;
+  }
+  .row-category-btn .btn-secondary {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
@@ -369,6 +581,23 @@ footer {
 @media screen and (max-width: 600px) {
   .products {
     width: 80%;
+  }
+  .vertical-banner {
+    height: 505px;
+    width: 400px;
+  }
+  .drop-menu-container {
+    margin: 0;
+    padding: 0;
+  }
+  .drop-menu-container .landing-home {
+    display: none;
+  }
+  .row-category-btn .btn-secondary {
+    width: 85px;
+    height: 35px;
+    font-size: 10px;
+    margin-left: 5px;
   }
 }
 

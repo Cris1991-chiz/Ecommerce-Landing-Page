@@ -32,7 +32,7 @@
                     <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
                 <ul>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#userLogin">Login</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="contactUs.html"><span class="contact">Contact Us </span> 
                     <i class="fa fa-phone"></i></a></li>
@@ -47,7 +47,7 @@
             </div>
             <form>
                 <input type="text" placeholder="search">
-                <button type="Submit" class="button_1"><i class="fa fa-search"></i></button>
+                <button type="Submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
             </form>
             <div class="cart-btn">     
                 <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
@@ -64,8 +64,8 @@
     <!-- End of Navigation Bar-->
     <!-- Drop Menu-->
     <div class="nav-bar" id="nav">
-        <ul>
-            <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+        <ul class="drop-menu-container">
+            <li><a href="#home" class="active"><i class="fa fa-home"></i><span class="landing-home">Home</span></a></li>
             <li class="drop-menu"><a href="#news">Batteries<i class="fa fa-caret-down"></i></a>  
                 <div class="drop-down">    
                     <a href="">Lipo Batteries</a>
@@ -76,6 +76,7 @@
             <li><a href="#contact">Charging</a></li>
             <li><a href="#contact">Connectors</a></li>
             <li><a href="#contact">Electronics</a></li>
+            <li class="bars-icon" id="btn-bars"><i class="fa fa-bars"></i></li>
         </ul>   
     </div>
     <!-- End of Drop Menu-->
@@ -87,19 +88,28 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
             </ol>
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/RCBanner1.jpg" class="d-block w-100">
+                <img src="images/Banner-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="images/RCBanner2.jpg" class="d-block w-100">
+                <img src="images/Banner-2.jpeg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="images/RCBanner3.jpg" class="d-block w-100">
+                <img src="images/Banner-3.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-                <img src="images/RCBanner4.jpg" class="d-block w-100">
+                <img src="images/Banner-4.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Banner-5.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="images/Banner-6.webp" class="d-block w-100">
             </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -113,105 +123,182 @@
         </div>
     </div>  
     <!-- End of Carousel Slider-->
+    <!-- Category Container-->
+    <div class="category-container">
+        <li class="active"><i class="fa fa-shopping-cart"></i></li>
+        <li>SHOP BY CATEGORY</li>
+    </div>
+    <div class="col-category-btn">
+        <div class="row-category-btn">
+            <button class="btn btn-secondary">DRONES</button>
+            <button class="btn btn-secondary">PLANES</button>
+            <button class="btn btn-secondary">HELICOPTERS</button>
+            <button class="btn btn-secondary">TRUCKS</button>
+            <button class="btn btn-secondary">BOATS</button>
+            <button class="btn btn-secondary">CARS</button>
+        </div>
+        <div class="row-category-btn">
+            <button class="btn btn-secondary">BATTERIES</button>
+            <button class="btn btn-secondary">CHARGERS</button>
+            <button class="btn btn-secondary">RADIOS</button>
+            <button class="btn btn-secondary">TOOLS</button>
+            <button class="btn btn-secondary">CONNECTORS</button>
+            <button class="btn btn-secondary">ELECTRONICS</button>
+        </div>
+    </div>
+    <!-- End of Category Container-->
     <!--Products Section-->
-    <section>
-        <div class="products-container">
-            <div class="column">
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone1.jpg" alt="">
+    <section >
+        <div class="col-product-container">
+            <div class="vertical-banner">
+                <ul> <li class="active">JUST ARRIVED</li></ul>               
+                <img src="/images/v-banner1.png" alt="">
+                <img src="/images/v-banner2.jpg" alt="">
+            </div>      
+            <div class="products-container">
+                <div class="column">
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone1.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone2.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
                     </div>
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone3.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone4.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
+                    </div>              
                 </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone2.jpg" alt="">
+                <div class="column">
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone5.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone6.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <div><button type="button" class="btn btn-secondary">Add to Cart</button></div>
+                        </div>
                     </div>
-                </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone3.jpg" alt="">
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone7.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <div class="products">
+                        <div class="img-container">
+                            <img src="images/drone8.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h5>Brand</h5>
+                            <p>This is the description, you have to put it here. Thank you.</p>
+                            <h5>$100.00</h5>
+                            <button type="button" class="btn btn-secondary">Add to Cart</button>
+                        </div>
                     </div>
-                </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone4.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
-                    </div>
-                </div>              
-            </div>
-            <div class="column">
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone5.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone6.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <div><button type="button" class="btn btn-primary">Add to Cart</button></div>
-                    </div>
-                </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone7.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="products">
-                    <div class="img-container">
-                        <img src="images/drone8.jpg" alt="">
-                    </div>
-                    <div class="details">
-                        <h5>Brand</h5>
-                        <p>This is the description, you have to put it here. Thank you.</p>
-                        <h5>$100.00</h5>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
+    <!--End of Products Section-->
+    <!-- Login Modal Section-->
+    <section>
+        <div class="customer-login" id="login"> 
+            <form class="login" action="" method="post">   
+                <div class="modal fade" id="userLogin">  
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="img-container">
+                                <img src="/images/Cris.jpg" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="login-title">
+                                <h5 class="modal-title">Customer Login</h5>
+                                <p>Discover Latest products and great deals.</p>
+                            </div>
+                            <span class="close" title="Close Modal" data-dismiss="modal" aria-label="Close">&times;</span>                
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <label for="name"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="name" required>
+                          
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                  
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="background-color:#f1f1f1"> 
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+     <!-- End of Login Modal Section-->
     <footer>
         <p>Cris Web Design, Copyright &copy; 2020</p>
-    </footer>  
+    </footer>
+    
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.login {
+    padding-top: 200px !important;
+}
+
+.modal-content {
+   
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 8px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #a9a9a9;
+        box-sizing: border-box;
+        outline: none;
+
+        &:focus {
+            border: 0.5px solid #e8491d !important;
+        }
+    }
+
+    
+    .img-container {
+        display: inline-block;
+        width: 20%;
+       
+        img.avatar {
+            border-radius: 50%;
+        }
+    }
+
+    .login-title {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: space-between;
+        padding: 10px 25px;
+    }
+}

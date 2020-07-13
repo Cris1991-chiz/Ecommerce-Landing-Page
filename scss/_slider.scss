@@ -1,12 +1,9 @@
 /*----slider scss----*/
 .slider{
-    width: 55%;
-    margin-top: 20px;
-    margin-left: 30%;
-    padding: 0 10px;
-
-    img {
-        height: 40%;
+    margin-top: 0;
+    
+    .carousel-inner{
+        max-height: 350px !important;
     }
 }
 
